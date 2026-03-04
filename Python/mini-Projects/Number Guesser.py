@@ -1,5 +1,5 @@
 import random
-count = -1
+count = 0
 number = random.randint(1,100)
 print("The computer has randomly a number in the range 1-100, you got 10 tries.")
 while True:

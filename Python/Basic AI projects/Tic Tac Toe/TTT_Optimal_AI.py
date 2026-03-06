@@ -1,5 +1,5 @@
 """
-This AI might be smarter but its still at the level of "If i can win, i will" and "If i can stop you from winning i will".
+This AI is much
 """
 
 import random
@@ -35,6 +35,7 @@ def ai_input(board):
                 return
 
             board[i] = '-'
+
     for i in range(0,len(board)):
         if board[i] == '-':
             board[i] = 'O'
@@ -43,6 +44,12 @@ def ai_input(board):
                 return
             board[i] = '-'
 
+    priority_list = [4,0,2,6,8]
+    for i in priority_list:
+        if board[i] == '-':
+            board[i] = 'X'
+            return    
+    
     while True:
         index = random.randint(0,len(board)-1)
 
@@ -99,8 +106,6 @@ while True:
         print("------------------------------------------------------------")
         draw_board(board)
         print("The game has been won by:",turn_buffer)
-        if turn_buffer == 'X':
-            print("You might just be a horrible player :(")
         break
 
     if draw_check(board):

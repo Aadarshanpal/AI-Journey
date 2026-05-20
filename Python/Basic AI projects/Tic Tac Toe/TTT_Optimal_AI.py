@@ -66,10 +66,10 @@ def human_input(board):
                 board[index] = 'O'
                 break
             else:
-                print("Input a valid position.")
+                print("Input a valid position within range 0-8")
                 continue
         except ValueError:
-            print("Enter a valid position.")
+            print("Enter a valid number.")
             continue
 
 
